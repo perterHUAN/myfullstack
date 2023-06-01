@@ -1,0 +1,27 @@
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+server->browser: HTML Code
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server->browser: main.css
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+server->browser: spa.js
+
+
+note over browser:
+browser starts executing js-code
+1. creat an array named note to store data
+2. define a function named redrawNotes to render data
+3. get data  from server
+4. define a function named sendToServer
+5. add eventListener to window when the file is loaded.
+end note
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->browser: [{ content: "HTML is easy", date: "2019-05-23" }, ...]
+
+
+note over browser:
+browser executes the event handler
+that renders notes to display
+
+end note

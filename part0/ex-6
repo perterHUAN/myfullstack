@@ -1,0 +1,11 @@
+note over browser:
+submit
+
+prevent default action
+add form data to note
+call redrawNotes to render
+post notes to server
+end note
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+server->browser: create sucessful (201)
