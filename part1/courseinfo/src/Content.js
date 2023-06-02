@@ -1,11 +1,9 @@
 import Part from "./Part";
 function Content(props) {
     return (
-        <>
-            <Part part={props.part1} exercise={props.exercises1} />
-            <Part part={props.part2} exercise={props.exercises2}/>
-            <Part part={props.part3} exercise={props.exercises3} />
-        </>
+        props.parts.map((item)  => {
+            return <Part part={item.name} exercise={item.exercises} />
+        })        
     );
 }
 export default Content;
