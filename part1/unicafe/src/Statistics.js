@@ -1,3 +1,4 @@
+import StatisticLine from "./StatisticLine";
 function Statistics({good, neutral, bad}) {
   const total = good + neutral + bad;
   const score = good - bad;
@@ -7,12 +8,12 @@ function Statistics({good, neutral, bad}) {
     return (
       <>
         <h1>Statistics</h1>
-        <p>good: {good}</p>
-        <p>neutral: {neutral}</p>
-        <p>bad: {bad}</p>
-        <p>all: {total}</p>
-        <p>average: {average}</p>
-        <p>positive: {positive}%</p>
+        <StatisticLine text='good' data={good} />
+        <StatisticLine text='neutral' data={neutral}/>
+        <StatisticLine text='bad' data={bad}/>
+        <StatisticLine text='total' data={total}/>
+        <StatisticLine text='average' data={average}/>
+        <StatisticLine text='positive' data={positive}/>
       </>
     );
   
