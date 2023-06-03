@@ -5,8 +5,9 @@ function App() {
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
 
-  const total = good + -1 * bad;
-  const average = total / 3;
+  const total = good + neutral +  bad;
+  const score = good - bad;
+  const average = total === 0 ? 0 : score / total;
   const positive = total === 0 ? 0 : good / total * 100; 
   return (
     <div>
