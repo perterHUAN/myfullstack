@@ -1,11 +1,11 @@
-function PersonForm({ newName, handleInputNameChange, newPhone, handleInputPhoneChange, addPhoneEntry }) {
+function PersonForm({ newName, handleInputNameChange, newNumber, handleInputNumberChange, addPhoneEntry }) {
     return (
       <form>
         <div>
           name: <input value={newName} onChange={handleInputNameChange}/>
         </div>
         <div>
-          phone: <input value={newPhone} onChange={handleInputPhoneChange}/>
+          phone: <input value={newNumber} onChange={handleInputNumberChange}/>
         </div>
         <div>
           <button type="submit" onClick={addPhoneEntry}>add</button>
